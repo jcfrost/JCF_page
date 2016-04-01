@@ -101,9 +101,20 @@
     <Content Include="assets\projects\bug_tracker-thumb1.jpg" />
     <Content Include="assets\projects\cars-thumb1.jpg" />
     <Content Include="assets\projects\comingsoon.jpg" />
+    <Content Include="assets\projects\doggies1.jpg" />
+    <Content Include="assets\projects\family1.jpg" />
+    <Content Include="assets\projects\FriendsOfUwharrie.png" />
+    <Content Include="assets\projects\jeep1.jpg" />
     <Content Include="assets\projects\JS-thumb1.jpg" />
+    <Content Include="assets\projects\JS1-numbers.jpg" />
+    <Content Include="assets\projects\JS2-factorial.jpg" />
+    <Content Include="assets\projects\JS3-fizzbuzz.jpg" />
+    <Content Include="assets\projects\JS4-palindrome.png" />
     <Content Include="assets\projects\JS_thumb.png" />
     <Content Include="assets\projects\ME_thumb.png" />
+    <Content Include="assets\projects\sailing1.jpg" />
+    <Content Include="assets\projects\sailing2.jpg" />
+    <Content Include="assets\projects\TL-logo.png" />
     <Content Include="assets\projects\under-construction.jpg" />
     <Content Include="Content\SyntaxHighlighter\shCore.css" />
     <Content Include="Content\SyntaxHighlighter\shCoreDefault.css" />
@@ -122,6 +133,10 @@
     <Content Include="Content\SyntaxHighlighter\shThemeMDUltra.css" />
     <Content Include="Content\SyntaxHighlighter\shThemeMidnight.css" />
     <Content Include="Content\SyntaxHighlighter\shThemeRDark.css" />
+    <Content Include="js\JS_Exercise1.js" />
+    <Content Include="js\JS_Exercise2.js" />
+    <Content Include="js\JS_Exercise3.js" />
+    <Content Include="js\JS_Exercise4.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -159,6 +174,7 @@
     <Content Include="font\fontawesome-webfont.ttf" />
     <Content Include="font\fontawesome-webfont.woff" />
     <Content Include="font\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\jfrost.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
