@@ -13,18 +13,14 @@ $(function(){
 	var sum = (firstNum + secondNum + thirdNum + fourthNum + fifthNum);
 	var mean = (sum / 5);
 	var product = (firstNum * secondNum * thirdNum * fourthNum * fifthNum);
-
-
         
-	$('#least').append("The smallest number is " + least);
-	$('#greatest').append("The greatest number is " + greatest);
-	$('#mean').append("The mean/average of these  numbers is " + mean);
-	$('#sum').append("The sum of these numbers is " + sum);
-	$('#product').append("The product of these numbers is " + product);
+	$('#least').text("The smallest number is: " + least);
+	$('#greatest').text("The greatest number is: " + greatest);
+	$('#mean').text("The mean/average of these numbers is: " + mean);
+	$('#sum').text("The sum of these numbers is: " + sum);
+	$('#product').text("The product of these numbers is: " + product);
 
   });
-
-
 });
 
 

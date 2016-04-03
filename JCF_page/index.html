@@ -25,8 +25,10 @@
 		<link rel="stylesheet" href="css/font-awesome.css">
 		<link rel="stylesheet" href="css/flexslider.css">
 		<link rel="stylesheet" href="css/designr-theme-orange2.css"><!--Changed theme from "...cyan" to "...orange2"-->
-		
-		
+
+        <link href="Content/SyntaxHighlighter/shCore.css" rel="stylesheet" />
+
+        <link href="Content/SyntaxHighlighter/shThemeDefault.css" rel="stylesheet" />
 		<!-- ==============================================
 		Fonts
 		=============================================== -->
@@ -230,7 +232,7 @@
 			
 		</section><!--End skills section -->
         
-        <!--**Adding the class provided Modal code JS-1**-->        
+        <!--**Adding the class provided Modal code JS-1**-->
         <div class="modal fade" id="JS-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -239,30 +241,74 @@
                         <h1 class="modal-title" id="myModalLabel">Number Games</h1>
                     </div>
                     <div class="modal-body col-sm-12">
-                        <h3>Number Games</h3>
-                        <div class="inputs:">
-                            <h4>Enter 5 whole numbers</h4>
-                            <ul>
-                                <li><label>First Number:</label><input name="firstNum" type="text"></li>
-                                <li><label>Second Number:</label><input name="secondNum" type="text"></li>
-                                <li><label>Third Number:</label><input name="thirdNum" type="text"></li>
-                                <li><label>Fouth Number:</label><input name="fourthNum" type="text"></li>
-                                <li><label>Fifth Number:</label><input name="fifthNum" type="text"></li>
-                            </ul>
-                            <button id="calcBtn">Calculate</button>
-                        </div>
+                        <div class="col-sm-5" style="color:#999">
+                            <!--App Section -->
+                            <!--<h3>Number Games</h3>-->
+                            <h3 style="color:#999">Enter 5 whole numbers</h3>
+                            <div class="row">
+                                <div class="col-sm-5"><p>First Number:</p></div>
+                                <div class="col-sm-7"><input name="firstNum" type="text" style="color:#999; text-align:center"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5"><p>Second Number:</p></div>
+                                <div class="col-sm-7"><input name="secondNum" type="text" style="color:#999; text-align: center"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5"><p>Third Number:</p></div>
+                                <div class="col-sm-7"><input name="thirdNum" type="text" style="color:#999; text-align: center"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5"><p>Fourth Number:</p></div>
+                                <div class="col-sm-7"><input name="fourthNum" type="text" style="color:#999; text-align: center"></div>
+                            </div>
 
-                        <div id="least"></div>
-                        <div id="greatest"></div>
-                        <div id="mean"></div>
-                        <div id="sum"></div>
-                        <div id="product"></div>
+                            <div class="row">
+                                <div class="col-sm-5"><p>Fifth Number:</p></div>
+                                <div class="col-sm-7"><input name="fifthNum" type="text" style="color:#999; text-align: center"></div>
+                            </div>
+
+                            <button id="calcBtn" style="color:#999">Calculate</button>
+
+                            <div class="row"><br/></div>
+
+                            <div id="least", style="font-size: 18px"></div>
+                            <div id="greatest", style="font-size: 18px"></div>
+                            <div id="mean", style="font-size: 18px"></div>
+                            <div id="sum", style="font-size: 18px"></div>
+                            <div id="product", style="font-size: 18px"></div>
+                        </div>
+                        <div class="col-sm-7">
+                            <!--Code Section -->
+                            <pre class="brush: js text">
+$(function(){
+  $('#calcBtn').click(function(){
+	var firstNum = parseInt($('input[name=firstNum]').val());
+	var secondNum = parseInt($('input[name=secondNum]').val());
+	var thirdNum = parseInt($('input[name=thirdNum]').val());
+	var fourthNum = parseInt($('input[name=fourthNum]').val());
+	var fifthNum = parseInt($('input[name=fifthNum]').val());
+	var least = Math.min(firstNum, secondNum, thirdNum, fourthNum, fifthNum);
+	var greatest = Math.max(firstNum, secondNum, thirdNum, fourthNum, fifthNum);
+	var sum = (firstNum + secondNum + thirdNum + fourthNum + fifthNum);
+	var mean = (sum / 5);
+	var product = (firstNum * secondNum * thirdNum * fourthNum * fifthNum);
+        
+	$('#least').text("The smallest number is: " + least);
+	$('#greatest').text("The greatest number is: " + greatest);
+	$('#mean').text("The mean/average of these numbers is: " + mean);
+	$('#sum').text("The sum of these numbers is: " + sum);
+	$('#product').text("The product of these numbers is: " + product);
+  });
+});
+    </pre>
+
+                        </div>
                     </div>
-                    <div class="modal-footer no-margin">
+                    <div class="modal-footer no-margin" style="border-top-color:white">
                     </div>
                 </div>
             </div>
-        </div>	
+        </div>
         <!--**END JS-1 class provided Modal code**-->
         <!--**Adding the class provided Modal code JS-2**-->
         <div class="modal fade" id="JS-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -274,21 +320,45 @@
                     </div>
                     <div class="modal-body col-sm-12">
                         <!--Add JS Exercise 2 HTML code-->
-                        <h3>Calculate Factorial</h3>
-                        <div id="inputs">
-                            <h4>Enter a positive whole number</h4>
+                        <div class="col-sm-5" style="color:#999">
+                            <!--App Section-->
+                            <!--<h3>Calculate Factorial</h3>-->
+                            <h3 style="color:#999">Enter a positive whole number</h3>
+                            <div class="row">
+                                <div class="col-sm-4"><p>Enter Number:</p></div>
+                                <div class="col-sm-8"><input name="num" type="text" style="color:#999; text-align:center"></div>
+                            </div>
 
-                            <ul>
-                                <li><label>Enter Number:</label><input name="num" type="text"></li>
+                            <button id="calcBtn2" style="color:#999">Calculate</button>
 
-                            </ul>
-                            <button id="calcBtn2">Calculate</button>
+
+                            <div class="row"><br /></div>
+
+                            <div id="result2" style="font-size: 18px"></div>
+                        </div>
+                        <div class="col-sm-7">
+                            <!--Code Section -->
+                            <pre class="brush: js text">
+$(function() {
+    $('#calcBtn2').click(function() {
+        var num = parseInt($('input[name=num]').val());
+        if (num < 1) {
+            $('#result2').text("Please enter a positive integer!");
+            return;
+        }
+        var calcNum = 1;
+        for (i = num; i >1; i--) {
+            calcNum*=i;
+        }
+        $('#result2').text("Factorial of " + num + " is " + calcNum);
+    
+    });
+});
+        </pre>
                         </div>
 
-                        <div id="result2"></div>
-
                     </div>
-                    <div class="modal-footer no-margin">
+                    <div class="modal-footer no-margin" style="border-top-color:white">
                     </div>
                 </div>
             </div>
@@ -304,20 +374,50 @@
                     </div>
                     <div class="modal-body col-sm-12">
                         <!--Add JS Exercise 3 HTML code-->
-                        <h3>FizzBuzz</h3>
-                        <div class="inputs3:">
-                            <h4>Enter 2 whole numbers</h4>
+                        <div class="col-sm-5" style="color:#999">
+                            <!--App Section -->
+                            <!--<h3>FizzBuzz</h3>-->
+                            <h3 style="color:#999">Enter 2 whole numbers</h3>
+                            <div class="row">
+                                <div class="col-sm-5"><p>First Number:</p></div>
+                                <div class="col-sm-7"><input name="numOne" type="text" style="color:#999; text-align:center"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5"><p>Second Number:</p></div>
+                                <div class="col-sm-7"><input name="numTwo" type="text" style="color:#999; text-align: center"></div>
+                            </div>
 
-                            <ul>
-                                <li><label>First Number: </label><input name="numOne" type="text"></li>
-                                <li><label>Second Number:</label><input name="numTwo" type="text"></li>
-                            </ul>
-                            <button id="calcBtn3">Calculate</button>
+                            <button id="calcBtn3" style="color:#999">Calculate</button>
+
+                            <div class="row"><br /></div>
+
+                            <div id="result3"></div>
                         </div>
+                        <div class="col-sm-7">
+                            <!--Code Section -->
+                            <pre class="brush: js text">
+$(function(){
+    $('#calcBtn3').click(function(){
+    var numOne = parseInt($('input[name=numOne]').val());
+    var numTwo = parseInt($('input[name=numTwo]').val());
+        for (i = 1; i < 101; i++) {
+            if (i % numOne === 0 && i % numTwo === 0) {
+                $('#result3').append("FizzBuzz " + "<br>");
+            } else if (i % numOne === 0) {
+                $('#result3').append("Fizz " + "<br>");
+            } else if (i % numTwo === 0) {
+                $('#result3').append("Buzz " + "<br>");
+            } else {
+                $('#result3').append(i + " " + "<br>");
+            }
+        };
+    });
+});
+        </pre>
 
-                        <div id="result3"></div>
+                        </div>
                     </div>
-                    <div class="modal-footer no-margin">
+                    <div class="modal-footer no-margin" style="border-top-color:white">
                     </div>
                 </div>
             </div>
@@ -329,23 +429,45 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h1 class="modal-title" id="myModalLabel">Palindrome</h1>
+                        <h1 class="modal-title" id="myModalLabel">Palindrome Checker</h1>
                     </div>
                     <div class="modal-body col-sm-12">
                         <!--Add JS Exercise 4 HTML code-->
-                        <h3>Palindrome Checker</h3>
-                        <div id="inputs4">
-                            <h4>Enter a word or string of text to see if it is a palindrome:</h4>
-                            <ul>
-                                <li><label>Enter word to be checked: </label><input name="orig4" type="text"></li>
-
-                            </ul>
-                            <button id="chkBtn4">Check</button>
+                        <div class="col-sm-5" style="color:#999">
+                            <!--App Section-->
+                            <!--<h3>Palindrome Checker</h3>-->
+                            <h4 style="color:#999">Enter a word or string of text to see if it is a palindrome:</h4>
+                            <div class="row">
+                                <div class="col-sm-12"><input name="orig4" type="text" style="color:#999; text-align:center"></div>
+                            </div>
+                            <div class="row"><br/></div>
+                            <button id="chkBtn4" style="color:#999">Check</button>
+                            <div class="row"><br /></div>
+                            <div id="result4" style="font-size: 18px"></div>
                         </div>
-
-                        <div id="result4"></div>
+                        <div class="col-sm-7">
+                            <!--Code Section -->
+                            <pre class="brush: js text">
+$(function() { //Increasing/decreasing for-loop with two arrays
+	$('#chkBtn4').click(function () {
+	    var orig4 = '';
+	    var rev = [];
+		orig4 = $('input[name=orig4]').val();
+		var origCaps = orig4.toUpperCase();
+		for (var i = orig4.length - 1, j = 0; i >= 0; i--, j++)
+			rev[j] = origCaps[i];
+			rev = rev.join('');
+        if(origCaps === rev) {
+			$('#result4').text(origCaps + " is a Palindrome");
+		} else {
+			$('#result4').text(origCaps + " is NOT a Palindrome");
+		}
+	});
+});
+        </pre>
+                        </div>
                     </div>
-                    <div class="modal-footer no-margin">
+                    <div class="modal-footer no-margin" style="border-top-color:white">
                     </div>
                 </div>
             </div>
@@ -420,130 +542,142 @@
                     </div>
                 </a>
 
-				<div id="projects-container">
+                <div id="projects-container">
 
-                       <!--Project thumb -->
-                        <!-- ==============================================
+                    <!--Project thumb -->
+                    <!-- ==============================================
         SINGLE PROJECT ITEM
         =============================================== -->
-                        <!--<a class="project-item web-design" href="http://www.google.com" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                    <!--<a class="project-item web-design" href="http://www.google.com" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
 
-                            <img class="img-responsive project-image" src="assets/projects/JS-thumb1.jpg" alt=""><!--Project thumb -- >
-                            
-                            <div class="hover-mask">
-                                <h2 class="project-title">JavaScript Exercises</h2><!--Project Title -- >
-                                <p><!--google.com--></p><!--Project Subtitle -- >
-                            </div>
+            <img class="img-responsive project-image" src="assets/projects/JS-thumb1.jpg" alt=""><!--Project thumb -- >
 
-                            <!--==== Project Preview HTML ====-- >
+            <div class="hover-mask">
+                <h2 class="project-title">JavaScript Exercises</h2><!--Project Title -- >
+                <p><!--google.com-->
+                    </p>
+                    <!--Project Subtitle -- >
+            </div>
 
-                            <div class="sr-only project-description">
-                                <p>These are JavaScript exercises that were done during the first week of my coding boot camp.</p>
-                                <img class="img-responsive img-center" src="assets/projects/JS_thumb.png" alt="">
-                                <p><em>JavaScript/jQuery Exercise 1: Number Games</em></p>
-                                <p><em>JavaScript/jQuery Exercise 2: Calculate Factorial</em></p>
-                                <p><em>JavaScript/jQuery Exercise 3: FizzBuzz!</em></p>
-                                <p><em>JavaScript/jQuery Exercise 4: Palindrome Checker</em></p>
-                            </div>
+            <!--==== Project Preview HTML ====-- >
 
-                        </a>-->
-                        <!-- ==============================================
+            <div class="sr-only project-description">
+                <p>These are JavaScript exercises that were done during the first week of my coding boot camp.</p>
+                <img class="img-responsive img-center" src="assets/projects/JS_thumb.png" alt="">
+                <p><em>JavaScript/jQuery Exercise 1: Number Games</em></p>
+                <p><em>JavaScript/jQuery Exercise 2: Calculate Factorial</em></p>
+                <p><em>JavaScript/jQuery Exercise 3: FizzBuzz!</em></p>
+                <p><em>JavaScript/jQuery Exercise 4: Palindrome Checker</em></p>
+            </div>
+
+        </a>-->
+                    <!-- ==============================================
         END PROJECT ITEM
         =============================================== -->
 
-                        <a class="project-item icons ui-kits" href="#somelink" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                    <a class="project-item icons ui-kits" href="#somelink" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
 
-                            <img class="img-responsive project-image" src="assets/projects/blog-thumb1.jpg" alt=""><!--Project thumb -->
+                        <img class="img-responsive project-image" src="assets/projects/blog-thumb1.jpg" alt=""><!--Project thumb -->
 
-                            <div class="hover-mask">
-                                <h2 class="project-title">Blog</h2><!--Project Title -->
-                                <p><!--microsoft.com--></p><!--Project Subtitle -->
-                            </div>
+                        <div class="hover-mask">
+                            <h2 class="project-title">Blog</h2><!--Project Title -->
+                            <p><!--microsoft.com--></p><!--Project Subtitle -->
+                        </div>
 
-                            <!--==== Project Preview HTML ====-->
+                        <!--==== Project Preview HTML ====-->
 
-                            <div class="sr-only project-description">
-                                <p class="clearfix">This is my second project. This project was created during weeks 2-3 of my coding boot camp.</p>
-                                <!--<p><em>**CONTENT NEEDED**</em></p>
-                <img class="img-responsive img-center" src="assets/projects/comingsoon.jpg" alt="">
-                <p><em>**CONTENT NEEDED**</em></p>-->
-                            </div>
+                        <div class="sr-only project-description">
+                            <p class="clearfix">This is my second project. This project was created during weeks 2-3 of my coding boot camp.</p>
+                            <img class="img-responsive img-center" src="assets/projects/comingsoon.jpg" alt="">
+                            <!--<p><em>**CONTENT NEEDED**</em></p>
+                            <p><em>**CONTENT NEEDED**</em></p>-->
 
-                        </a><!--End Project Item -->
-                        <a class="project-item web-design ui-kits" href="#somelink" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                        </div>
 
-                            <img class="img-responsive project-image" src="assets/projects/bug_tracker-thumb1.jpg" alt=""><!--Project thumb -->
+                    </a><!--End Project Item -->
+                    <a class="project-item web-design ui-kits" href="#somelink" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
 
-                            <div class="hover-mask">
-                                <h2 class="project-title">Bug Tracker</h2><!--Project Title -->
-                                <p><!--amazon.com--></p><!--Project Subtitle -->
-                            </div>
+                        <img class="img-responsive project-image" src="assets/projects/bug_tracker-thumb1.jpg" alt=""><!--Project thumb -->
 
-                            <!--==== Project Preview HTML ====-->
+                        <div class="hover-mask">
+                            <h2 class="project-title">Bug Tracker</h2><!--Project Title -->
+                            <p><!--amazon.com--></p><!--Project Subtitle -->
+                        </div>
 
-                            <div class="sr-only project-description">
-                                <p class="clearfix">This is my third project. This project was created during weeks 4-6 of my coding boot camp.</p>
-                                <!--<p><em>**CONTENT NEEDED**</em></p>
-                <img class="img-responsive img-center" src="assets/projects/comingsoon.jpg"  alt="">
-                <p><em>**CONTENT NEEDED**</em></p>-->
-                            </div>
+                        <!--==== Project Preview HTML ====-->
 
-                        </a><!--End Project Item -->
-                        <a class="project-item ui-kits" href="http://www.google.com" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                        <div class="sr-only project-description">
+                            <p class="clearfix">This is my third project. This project was created during weeks 4-6 of my coding boot camp.</p>
+                            <img class="img-responsive img-center" src="assets/projects/comingsoon.jpg"  alt="">
+                            <!--<p><em>**CONTENT NEEDED**</em></p>
+                            <p><em>**CONTENT NEEDED**</em></p>-->
+                        </div>
 
-                            <img class="img-responsive project-image" src="assets/projects/budget-thumb1.jpg" alt=""><!--Project thumb -->
+                    </a><!--End Project Item -->
+                    <a class="project-item ui-kits" href="http://www.google.com" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
 
-                            <div class="hover-mask">
-                                <h2 class="project-title">Budgeting System</h2><!--Project Title -->
-                                <p><!--google.com--></p><!--Project Subtitle -->
-                            </div>
+                        <img class="img-responsive project-image" src="assets/projects/budget-thumb1.jpg" alt=""><!--Project thumb -->
 
-                            <!--==== Project Preview HTML ====-->
+                        <div class="hover-mask">
+                            <h2 class="project-title">Budgeting System</h2><!--Project Title -->
+                            <p><!--google.com--></p><!--Project Subtitle -->
+                        </div>
 
-                            <div class="sr-only project-description">
-                                <p>This is my fourth project. This project was created during weeks 6-10 of my coding boot camp.</p>
-                                <img class="img-responsive img-center" src="assets/projects/comingsoon.jpg" alt="">
-                                <!--<p><em>**CONTENT NEEDED**</em></p>
-                <p><em>**CONTENT NEEDED**</em></p>-->
-                            </div>
+                        <!--==== Project Preview HTML ====-->
 
-                        </a><!--End Project Item -->
-                        <a class="project-item icons" href="#somelink" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                        <div class="sr-only project-description">
+                            <p>This is my fourth project. This project was created during weeks 6-10 of my coding boot camp.</p>
+                            <img class="img-responsive img-center" src="assets/projects/comingsoon.jpg" alt="">
+                            <!--<p><em>**CONTENT NEEDED**</em></p>
+                            <p><em>**CONTENT NEEDED**</em></p>-->
+                        </div>
 
-                            <img class="img-responsive project-image" src="assets/projects/cars-thumb1.jpg" alt=""><!--Project thumb -->
+                    </a><!--End Project Item -->
+                    <a class="project-item icons" href="#somelink" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
 
-                            <div class="hover-mask">
-                                <h2 class="project-title">Car Lister</h2><!--Project Title -->
-                                <p><!--microsoft.com--></p><!--Project Subtitle -->
-                            </div>
+                        <img class="img-responsive project-image" src="assets/projects/cars-thumb1.jpg" alt=""><!--Project thumb -->
 
-                            <!--==== Project Preview HTML ====-->
+                        <div class="hover-mask">
+                            <h2 class="project-title">Car Lister</h2><!--Project Title -->
+                            <p><!--microsoft.com--></p><!--Project Subtitle -->
+                        </div>
 
-                            <div class="sr-only project-description">
-                                <p class="clearfix">This is my fifth project. This project was created during weeks 10-12 of my coding boot camp.</p>
-                                <!--<p><em>**CONTENT NEEDED**</em></p>
-                <img class="img-responsive img-center" src="assets/projects/comingsoon.jpg" alt="">
-                <p><em>**CONTENT NEEDED**</em></p>-->
-                            </div>
+                        <!--==== Project Preview HTML ====-->
 
-                        </a><!--End Project Item -->
-                        <a class="project-item web-design" href="http://jfrost.azurewebsites.net/" data-images="assets/projects/family1.jpg, assets/projects/jeep1.jpg, assets/projects/TL-logo.png, assets/projects/doggies1.jpg, assets/projects/sailing2.jpg, assets/projects/FriendsOfUwharrie.png, assets/projects/project-slide.jpg">
+                        <div class="sr-only project-description">
+                            <p class="clearfix">This is my fifth project. This project was created during weeks 10-12 of my coding boot camp.</p>
+                            <!--<p><em>**CONTENT NEEDED**</em></p>-->
+                            <img class="img-responsive img-center" src="assets/projects/comingsoon.jpg" alt="">
+                            <!--<p><em>**CONTENT NEEDED**</em></p>-->
+                        </div>
 
-                            <img class="img-responsive project-image" src="assets/projects/ME_thumb.png" alt=""><!--Project thumb -->
+                    </a><!--End Project Item -->
+                    <a class="project-item web-design" href="http://jfrost.azurewebsites.net/" data-images="assets/projects/family1.jpg, assets/projects/jeep1.jpg, assets/projects/TL-logo.png, assets/projects/doggies1.jpg, assets/projects/sailing2.jpg, assets/projects/FriendsOfUwharrie.png, assets/projects/Clemson_paw2.jpg, assets/projects/ECU2.jpg">
 
-                            <div class="hover-mask">
-                                <h2 class="project-title">Personal Interests</h2><!--Project Title -->
-                                <p><!--amazon.com--></p><!--Project Subtitle -->
-                            </div>
+                        <img class="img-responsive project-image" src="assets/projects/ME_thumb.png" alt=""><!--Project thumb -->
 
-                            <!--==== Project Preview HTML ====-->
+                        <div class="hover-mask">
+                            <h2 class="project-title">Personal Interests</h2><!--Project Title -->
+                            <p><!--amazon.com--></p><!--Project Subtitle -->
+                        </div>
 
-                            <div class="sr-only project-description">
-                                <p class="clearfix">Here are some images of some of the things that I enjoy doing and participating in.</p>
-                                <p>Family, Triad Jeep Club, Friends of Uwharrie, tread lightly!, Sailing, Clemson University, East Carolina Football and NASCAR (among other things!).</p>
-                                <!--<img class="img-responsive img-center" src="assets/projects/company-logo.png"  alt="">-->
-                                <p><em>**CONTENT NEEDED**</em></p>
-                            </div>
+                        <!--==== Project Preview HTML ====-->
+
+                        <div class="sr-only project-description">
+                            <p class="clearfix">Here are some images of some of the things that I enjoy doing and participating in.</p>
+                            <p>Family, Triad Jeep Club, Friends of Uwharrie, tread lightly!, Sailing, Clemson University, East Carolina Football and NASCAR (among other things!).</p>
+                            <p>Below is my resume.</p>
+                            <img class="img-responsive img-center" src="assets/projects/JCF_resume1a.jpg" alt="">
+                            <img class="img-responsive img-center" src="assets/projects/JCF_resume2a.jpg" alt="">
+                            <!--
+                            <img class="img-responsive img-center" src="assets/projects/jeep1.jpg" alt="">
+                            <img class="img-responsive img-center" src="assets/projects/FriendsOfUwharrie.png" alt="">
+                            <img class="img-responsive img-center" src="assets/projects/TL-logo.png" alt="">
+                            <img class="img-responsive img-center" src="assets/projects/sailing1.jpg" alt="">
+                            <img class="img-responsive img-center" src="assets/projects/Clemson_paw1.jpg" alt="">
+                            <img class="img-responsive img-center" src="assets/projects/ECU1.jpg" alt="">
+                            -->
+                        </div>
 
                         </a><!--End Project Item -- >-->
                         <!--<a class="project-item web-design" href="http://www.google.com" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
@@ -625,13 +759,13 @@
 						
 						<div class="modal-body">
 						
-							<!--**Removed computer image with rotating photos**
+							<!--**Removed computer image with rotating photos**-->
                             <div class="left-col"> 
 								<img class="img-responsive" src="assets/imac.png" alt="">
 								<div class="loader"></div>
 								<div class="image-wrapper"></div>
 							</div>
-                            -->
+                            
 							
 							<h1>**TEST TEXT**</h1>
 							
@@ -789,11 +923,15 @@
 		<script src="js/jquery.backstretch.min.js"></script>
 		<script src="js/contact.js"></script>
 		<script src="js/designr_1.js"></script>
-
+            <script src="scripts/SyntaxHighlighter/shCore.js"></script>
+            <script src="scripts/SyntaxHighlighter/shBrushJScript.js"></script>
         <script src="js/JS_Exercise1.js"></script>
         <script src="js/JS_Exercise2.js"></script>
         <script src="js/JS_Exercise3.js"></script>
         <script src="js/JS_Exercise4.js"></script>
+            <script>
+                SyntaxHighlighter.all()
+            </script>
 	</body>
 	
 </html>

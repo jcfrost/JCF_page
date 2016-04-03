@@ -100,10 +100,16 @@
     <Content Include="assets\projects\budget-thumb1.jpg" />
     <Content Include="assets\projects\bug_tracker-thumb1.jpg" />
     <Content Include="assets\projects\cars-thumb1.jpg" />
+    <Content Include="assets\projects\Clemson_paw1.jpg" />
+    <Content Include="assets\projects\Clemson_paw2.jpg" />
     <Content Include="assets\projects\comingsoon.jpg" />
     <Content Include="assets\projects\doggies1.jpg" />
+    <Content Include="assets\projects\ECU1.jpg" />
+    <Content Include="assets\projects\ECU2.jpg" />
     <Content Include="assets\projects\family1.jpg" />
     <Content Include="assets\projects\FriendsOfUwharrie.png" />
+    <Content Include="assets\projects\JCF_resume1a.jpg" />
+    <Content Include="assets\projects\JCF_resume2a.jpg" />
     <Content Include="assets\projects\jeep1.jpg" />
     <Content Include="assets\projects\JS-thumb1.jpg" />
     <Content Include="assets\projects\JS1-numbers.jpg" />
