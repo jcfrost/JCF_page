@@ -55,7 +55,7 @@ h1 {
 
 h1.section-title{
     position:relative;
-    margin:0 0 124px;
+    margin:0 0 20px;/*changed 124px to 20px*/
     font-size:48px;
     line-height:64px;
     font-weight:300;
@@ -400,7 +400,7 @@ header.jumbotron{
 #services{
     background:#fff;
     color:#999;
-    padding:80px 0;
+    padding:20px 0;
 }
 
 #services .row.line {
@@ -508,7 +508,7 @@ header.jumbotron{
 #about {
     background:#ff4500;/*Changed #efae49 to #ff4500*/
     color:#fff;
-    padding:80px 0;
+    padding:15px 0;
 }
 
 #about h1 {
@@ -604,7 +604,7 @@ header.jumbotron{
 #portfolio .section-title {
     color:#ff4500;/*#ce8e29 changed to #ff4500*/
     font-weight:300;
-    margin-bottom:60px;
+    margin-bottom:10px;/*changed 60px to 10px*/
 }
 
 #portfolio .section-title [class*=icon]{
@@ -612,7 +612,7 @@ header.jumbotron{
 }
 
 #portfolio-header {
-    padding:80px 0;
+    padding:40px 0;/*changed 80px to 40px*/
     background:#f5f5f5;
     border-top:1px solid #ddd;
     border-bottom:1px solid #ddd;
@@ -1068,13 +1068,13 @@ header.jumbotron{
 
 #contact {/*Contact Info*/
     background:transparent;
-    color:#fff;/*Changed #fff (white) to #ff4500 (orangered)*/
-	padding:80px 0; 
+    color:#ff4500;/*Changed #fff (white) to #ff4500 (orangered)*/
+	padding:15px 0; 
 }
 
 #contact .section-title {
     color:#fff;/*Changed #fff (white) to #ff4500 (orangered)*/
-    margin-bottom:84px;
+    margin-bottom:24px;/*changed 84px to 24px*/
 }
 
 #contact .section-title [class*=icon]{
@@ -1090,6 +1090,8 @@ header.jumbotron{
 
 #contact .contact-info p,
 #contact .contact-info address{
+    background:#fff;/*added*/
+    background:rgba(255,255,255,0.9);/*added*/
     margin:0 0 30px;
     font-size:18px;
     line-height:30px;

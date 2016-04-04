@@ -108,6 +108,8 @@
     <Content Include="assets\projects\ECU2.jpg" />
     <Content Include="assets\projects\family1.jpg" />
     <Content Include="assets\projects\FriendsOfUwharrie.png" />
+    <Content Include="assets\projects\JCF-linkedin_photo.jpg" />
+    <Content Include="assets\projects\JCF-linkedin_photo1.jpg" />
     <Content Include="assets\projects\JCF_resume1a.jpg" />
     <Content Include="assets\projects\JCF_resume2a.jpg" />
     <Content Include="assets\projects\jeep1.jpg" />
@@ -180,6 +182,7 @@
     <Content Include="font\fontawesome-webfont.ttf" />
     <Content Include="font\fontawesome-webfont.woff" />
     <Content Include="font\FontAwesome.otf" />
+    <Content Include="assets\projects\Resume of James Frost 032316.pdf" />
     <None Include="Properties\PublishProfiles\jfrost.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
