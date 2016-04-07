@@ -187,12 +187,14 @@
 			
 				<div class="row">
 					<div class="col-sm-4 col-sm-offset-1 scrollimation fade-right">
-						<img class="img-responsive img-circle img-center" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAASnAAAAJGE5ODQ3MDQyLTdjNWYtNDc0NS04ZWQ3LWVmZDU0MTI5ODdkZA.jpg" alt="">
+						<img class="img-responsive img-circle img-center" src="assets/projects/JCF-linkedin_photo.jpg" alt="">
 					</div>
 					<div class="col-sm-6 col-sm-offset-1 scrollimation fade-left">
 						<h1>Hello, I am James Frost...</h1>
 						<p>I live in <a href="https://www.google.com/maps/place/Greensboro,+NC/data=!4m2!3m1!1s0x8853193f38c77b79:0x93b9c49478be12c8?sa=X&sqi=2&ved=0ahUKEwjZosef1u3LAhWGYiYKHVXpDkUQ8gEIiAEwDg">Greensboro, North Carolina</a> and I am currently attending the Full-Stack .NET Development (Accelerated) coding boot camp at the <a href="http://www.coderfoundry.com">Coder Foundry</a> in <a href="https://www.google.com/maps/place/Kernersville,+NC/data=!4m2!3m1!1s0x885300b62583be03:0x4ab713f1216cea05?sa=X&sqi=2&ved=0ahUKEwiGv_zk1u3LAhXL5yYKHYU7BvoQ8gEIggEwDQ">Kernersville, North Carolina</a>.<br/>Software development and the problem solving challenges related to creating code have always intriqued me. </p>
 						<a href="https://www.linkedin.com/in/jcfrost" class="btn btn-theme transparent">Visit my LinkedIn profile</a>
+                        <p></p>
+                        <a href="assets/projects/Resume of James Frost 032316.pdf" class="btn btn-theme transparent">Download my resume (.pdf)</a>
 					</div>
 				</div><!--End row -->
 				
@@ -652,31 +654,20 @@ $(function() { //Increasing/decreasing for-loop with two arrays
                         </div>
 
                     </a><!--End Project Item -->
-                    <a class="project-item web-design" href="http://jfrost.azurewebsites.net/" data-images="assets/projects/family1.jpg, assets/projects/jeep1.jpg, assets/projects/TL-logo.png, assets/projects/doggies1.jpg, assets/projects/sailing2.jpg, assets/projects/FriendsOfUwharrie.png, assets/projects/Clemson_paw2.jpg, assets/projects/ECU2.jpg">
+                    <!--<a class="project-item web-design" href="http://jfrost.azurewebsites.net/" data-images="assets/projects/family1.jpg, assets/projects/jeep1.jpg, assets/projects/TL-logo.png, assets/projects/doggies1.jpg, assets/projects/sailing2.jpg, assets/projects/FriendsOfUwharrie.png, assets/projects/Clemson_paw2.jpg, assets/projects/ECU2.jpg">
 
-                        <img class="img-responsive project-image" src="assets/projects/ME_thumb.png" alt=""><!--Project thumb -->
+                        <img class="img-responsive project-image" src="assets/projects/ME_thumb.png" alt=""><!--Project thumb -- >
 
                         <div class="hover-mask">
-                            <h2 class="project-title">Personal Interests</h2><!--Project Title -->
-                            <p><!--amazon.com--></p><!--Project Subtitle -->
+                            <h2 class="project-title">Personal Interests</h2><!--Project Title -- >
+                            <p><!--amazon.com--></p><!--Project Subtitle -- >
                         </div>
 
-                        <!--==== Project Preview HTML ====-->
+                        <!--==== Project Preview HTML ====-- >
 
                         <div class="sr-only project-description">
                             <p class="clearfix">Here are some images of some of the things that I enjoy doing and participating in.</p>
                             <p>Family, Triad Jeep Club, Friends of Uwharrie, tread lightly!, Sailing, Clemson University, East Carolina Football and NASCAR (among other things!).</p>
-                            <p>Below is my resume.</p>
-                            <img class="img-responsive img-center" src="assets/projects/JCF_resume1a.jpg" alt="">
-                            <img class="img-responsive img-center" src="assets/projects/JCF_resume2a.jpg" alt="">
-                            <!--
-                            <img class="img-responsive img-center" src="assets/projects/jeep1.jpg" alt="">
-                            <img class="img-responsive img-center" src="assets/projects/FriendsOfUwharrie.png" alt="">
-                            <img class="img-responsive img-center" src="assets/projects/TL-logo.png" alt="">
-                            <img class="img-responsive img-center" src="assets/projects/sailing1.jpg" alt="">
-                            <img class="img-responsive img-center" src="assets/projects/Clemson_paw1.jpg" alt="">
-                            <img class="img-responsive img-center" src="assets/projects/ECU1.jpg" alt="">
-                            -->
                         </div>
 
                         </a><!--End Project Item -- >-->
@@ -818,13 +809,13 @@ $(function() { //Increasing/decreasing for-loop with two arrays
 				
 					<div class="col-sm-5 contact-info scrollimation fade-right">
 						
-						<p>I have a Bachelor's degree in Computer Engineering from Clemson University and a Master's degree in Industrial Technology from North Carolina A&T State University. After a many years as a manufacturing engineer and then as a technical sales engineer, I am rebranding myself for a new career as a software developer.</p>
+						<p style="padding:10px">I have a Bachelor's degree in Computer Engineering from Clemson University and a Master's degree in Industrial Technology from North Carolina A&T State University. After a many years as a manufacturing engineer and then as a technical sales engineer, I am rebranding myself for a new career as a software developer.</p><!--added "style=..."-->
 						
-						<address>
+						<address style="padding:10px"><!--added "style=..."-->
 							James Frost<br>
-							3820 Brandt Lake Court<br>
-							Greensboro, NC (North Carolina) 27410<br>
-							(336) 210-1008
+							<!--street address-->
+                            Greensboro, NC (North Carolina)<br>
+							<!--phone number-->
 						</address>
 						
 						<!--**Remove Social Links
@@ -845,7 +836,7 @@ $(function() { //Increasing/decreasing for-loop with two arrays
 						  <label class="control-label" for="contact-name">Name</label>
 						  <div class="controls">
 							<i class="icon-user"></i>
-							<input id="contact-name" name="contactName" placeholder="My name is..." class="form-control input-lg requiredField" type="text" data-error-empty="Please enter your name">
+							<input id="contact-name" name="contactName" placeholder="My name is..." class="form-control input-lg requiredField" type="text" data-error-empty="Please enter your name" style="margin-bottom:25px">
 						  </div>
 						</div><!-- End name input -->
 						
@@ -853,7 +844,7 @@ $(function() { //Increasing/decreasing for-loop with two arrays
 						  <label class="control-label" for="contact-mail">Email</label>
 						  <div class=" controls">
 							<i class="icon-envelope"></i>
-							<input id="contact-mail" name="email" placeholder="Please respond at..." class="form-control input-lg requiredField" type="email" data-error-empty="Please enter your email" data-error-invalid="Invalid email address">
+							<input id="contact-mail" name="email" placeholder="Please respond at..." class="form-control input-lg requiredField" type="email" data-error-empty="Please enter your email" data-error-invalid="Invalid email address" style="margin-bottom:25px">
 						  </div>
 						</div><!-- End email input -->
 						
@@ -861,7 +852,7 @@ $(function() { //Increasing/decreasing for-loop with two arrays
 						  <label class="control-label" for="contact-message">Message</label>
 							<div class="controls">
 								<i class="icon-comment"></i>
-								<textarea id="contact-message" name="comments"  placeholder="I wanna talk about..." class="form-control input-lg requiredField" rows="5" data-error-empty="Please enter your message"></textarea>
+								<textarea id="contact-message" name="comments"  placeholder="I wanna talk about..." class="form-control input-lg requiredField" rows="4" data-error-empty="Please enter your message" style="margin-bottom:25px"></textarea>
 							</div>
 						</div><!-- End textarea -->
 						

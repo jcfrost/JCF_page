@@ -516,7 +516,7 @@ header.jumbotron{
     font-size:36px;
     line-height:42px;
     font-weight:300;
-    margin-bottom:24px;
+    margin-bottom:60px;/*Changed 24px to 54px*/
     position:relative;
 }
 
@@ -1091,7 +1091,7 @@ header.jumbotron{
 #contact .contact-info p,
 #contact .contact-info address{
     background:#fff;/*added*/
-    background:rgba(255,255,255,0.9);/*added*/
+    background:rgba(255,255,255,0.8);/*added*/
     margin:0 0 30px;
     font-size:18px;
     line-height:30px;
@@ -1147,7 +1147,7 @@ header.jumbotron{
 
 #contact-form .form-control {
     background:#fff;
-    background:rgba(255,255,255,0.9);
+    background:rgba(255,255,255,0.8);/*Changed 0.9 to 0.8*/
     border:none;
     border-radius:1px;
     outline:none;
