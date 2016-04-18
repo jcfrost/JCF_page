@@ -213,7 +213,7 @@ $(document).ready(function() {
 	/*============================================
 	Backstretch Images
 	==============================================*/
-	$.backstretch('assets/beach_1.jpg');/*header-bg changed to tiger_1*/
+	$.backstretch('assets/beach_1.jpg');/*header-bg changed to beach_1*/
 
 	$('body').append('<img class="preload-image" src="assets/beach_2.jpg" style="display:none;"/>');/*"contact-bg.jpg" changed to "beach_2.jpg"*/
 
@@ -226,7 +226,7 @@ $(document).ready(function() {
 		if (direction=='down'){
 		    $.backstretch('assets/beach_2.jpg');/*"contact-bg.jpg" changed to "beach_2.jpg"*/
 		}else{
-		    $.backstretch('assets/beach_1.jpg');/*header-bg changed to tiger_1*/
+		    $.backstretch('assets/beach_1.jpg');/*header-bg changed to beach_1*/
 		}
 	});
 	
